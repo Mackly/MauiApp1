@@ -18,6 +18,7 @@ public partial class MainPage : ContentPage
 #if ANDROID
     public void MapCustomWebViewClient(IWebViewHandler handler, IWebView webView)
     {
+        WebViewHandler.MapWebViewClient(handler, webView);
         handler.PlatformView.SetWebViewClient(new MauiApp1.Platforms.Android.CustomWebViewClient(handler as WebViewHandler));
     }
 #endif
